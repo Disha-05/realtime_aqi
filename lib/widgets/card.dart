@@ -20,7 +20,7 @@ class MyCardWidget extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(25.0),
         ),
-        color: Colors.white.withOpacity(0.5),
+        color: Colors.white.withOpacity(0.7),
         elevation: 10,
         child: Padding(
           padding: const EdgeInsets.all(15),
