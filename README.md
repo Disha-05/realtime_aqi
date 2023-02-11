@@ -1,5 +1,5 @@
 # realtime_aqi
-### This app uses your current loaction using geolocator package and displays the current air pollutants level along with the realtime AQI.
+#### This app uses your current loaction using geolocator package and displays the current air pollutants level along with the realtime AQI.
 
 ## Extracting current location using Geolocator package
 
@@ -12,3 +12,7 @@
 ## Realtime AQI 
 
 ![Screenshot_1676088316](https://user-images.githubusercontent.com/77150251/218238671-ab24608c-83f9-4dc5-bc28-2abcd796423a.png)
+
+## Screen Recording
+
+https://user-images.githubusercontent.com/77150251/218239964-049d4a6e-1e7d-4c49-8fb3-6ee68e1a8da5.mp4
