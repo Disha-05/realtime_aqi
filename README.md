@@ -1,9 +1,9 @@
 # realtime_aqi
+### This app uses your current loaction using geolocator package and displays the current air pollutants level along with the realtime AQI.
 
 ## Extracting current location using Geolocator package
 
-![Screenshot_1676088342](https://user-images.githubusercontent.com/77150251/218238480-6dd4e00b-bf90-494c-a84d-344e7e30598c.png | width=100)
-A new Flutter project.
+![Screenshot_1676088342](https://user-images.githubusercontent.com/77150251/218238480-6dd4e00b-bf90-494c-a84d-344e7e30598c.png)
 
 ## Loading Page
 
