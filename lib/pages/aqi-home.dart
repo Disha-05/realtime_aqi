@@ -80,8 +80,11 @@ class _AQIPageState extends State<AQIPage> {
         child: SafeArea(
           child: Container(
               decoration: BoxDecoration(
-                color: Colors.black.withOpacity(0.8),
-              ),
+                  //color: Colors.black.withOpacity(0.8),
+                  gradient: RadialGradient(colors: [
+                Color.fromARGB(255, 204, 245, 248),
+                Color.fromARGB(226, 187, 112, 248)
+              ], radius: 0.9)),
               child: Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: Column(
@@ -129,84 +132,86 @@ class _AQIPageState extends State<AQIPage> {
                       ),
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 20,
                     ),
                     SizedBox(
-                      height: 300,
+                      height: 310,
                       child: SfRadialGauge(
                         axes: <RadialAxis>[
                           RadialAxis(
-                              showLabels: false,
-                              // showAxisLine: false,
-                              // showTicks: false,
-                              minimum: 0.5,
-                              maximum: 5.5,
-                              ranges: <GaugeRange>[
-                                GaugeRange(
-                                    startValue: 0.5,
-                                    endValue: 1.5,
-                                    color:
-                                        const Color.fromARGB(255, 11, 167, 17),
-                                    label: 'Good',
-                                    sizeUnit: GaugeSizeUnit.factor,
-                                    labelStyle: const GaugeTextStyle(
-                                        fontSize: 20, color: Colors.white),
-                                    startWidth: 0.65,
-                                    endWidth: 0.65),
-                                GaugeRange(
-                                    startValue: 1.5,
-                                    endValue: 2.5,
-                                    color: const Color.fromARGB(
-                                        255, 128, 219, 116),
-                                    label: 'Fair',
-                                    sizeUnit: GaugeSizeUnit.factor,
-                                    labelStyle: const GaugeTextStyle(
-                                        fontSize: 20, color: Colors.white),
-                                    startWidth: 0.65,
-                                    endWidth: 0.65),
-                                GaugeRange(
-                                  startValue: 2.5,
-                                  endValue: 3.5,
-                                  color: const Color(0xFFFFBA00),
-                                  label: 'Moderate',
-                                  labelStyle: const GaugeTextStyle(
-                                      fontSize: 20, color: Colors.white),
-                                  startWidth: 0.65,
-                                  endWidth: 0.65,
-                                  sizeUnit: GaugeSizeUnit.factor,
-                                ),
-                                GaugeRange(
-                                  startValue: 3.5,
-                                  endValue: 4.5,
-                                  color:
-                                      const Color.fromARGB(255, 216, 105, 31),
-                                  label: 'Poor',
-                                  labelStyle: const GaugeTextStyle(
-                                      fontSize: 20, color: Colors.white),
-                                  sizeUnit: GaugeSizeUnit.factor,
-                                  startWidth: 0.65,
-                                  endWidth: 0.65,
-                                ),
-                                GaugeRange(
-                                  startValue: 4.5,
-                                  endValue: 5.5,
-                                  color: const Color.fromARGB(255, 171, 0, 0),
-                                  label: 'Very Poor',
-                                  labelStyle: const GaugeTextStyle(
-                                      fontSize: 20, color: Colors.white),
-                                  sizeUnit: GaugeSizeUnit.factor,
-                                  startWidth: 0.65,
-                                  endWidth: 0.65,
-                                ),
-                              ],
-                              pointers: <GaugePointer>[
-                                NeedlePointer(value: aqi.toDouble())
-                              ])
+                            showLabels: false,
+                            // showAxisLine: false,
+                            showTicks: false,
+                            startAngle: 180,
+                            endAngle: 0,
+                            minimum: 0.5,
+                            maximum: 5.5,
+                            ranges: <GaugeRange>[
+                              GaugeRange(
+                                startValue: 0.5,
+                                endValue: 1.5,
+                                gradient: const SweepGradient(colors: <Color>[
+                                  Color(0xFF1B5E20),
+                                  Color(0xFFB2FF59)
+                                ]),
+                              ),
+                              GaugeRange(
+                                startValue: 1.5,
+                                endValue: 2.5,
+                                gradient: const SweepGradient(colors: <Color>[
+                                  Color(0xFFB2FF59),
+                                  Color(0xFFFFEB3B)
+                                ]),
+                              ),
+                              GaugeRange(
+                                startValue: 2.5,
+                                endValue: 3.5,
+                                gradient: const SweepGradient(colors: <Color>[
+                                  Color(0xFFFFEB3B),
+                                  Color(0xFFFF6F00)
+                                ]),
+                              ),
+                              GaugeRange(
+                                startValue: 3.5,
+                                endValue: 4.5,
+                                gradient: const SweepGradient(colors: <Color>[
+                                  Color(0xFFFF6F00),
+                                  Color(0xFFD50000)
+                                ]),
+                              ),
+                              GaugeRange(
+                                startValue: 4.5,
+                                endValue: 5.5,
+                                gradient: const SweepGradient(colors: <Color>[
+                                  Color(0xFFB50000),
+                                  Color.fromARGB(255, 59, 1, 1)
+                                ]),
+                              )
+                            ],
+                            annotations: <GaugeAnnotation>[
+                              GaugeAnnotation(
+                                  widget: Container(
+                                      child: Text('$qname',
+                                          style: TextStyle(
+                                              color: Color.fromARGB(
+                                                  255, 104, 11, 224),
+                                              fontSize: 35,
+                                              fontWeight: FontWeight.bold))),
+                                  angle: 90,
+                                  positionFactor: 0.5)
+                            ],
+
+                            pointers: <GaugePointer>[
+                              MarkerPointer(
+                                  value: aqi.toDouble(),
+                                  markerType: MarkerType.image,
+                                  markerHeight: 30,
+                                  markerWidth: 30,
+                                  imageUrl: 'assets/pin.png')
+                            ],
+                          ),
                         ],
                       ),
-                    ),
-                    const SizedBox(
-                      height: 5,
                     ),
                     MyCardWidget(
                       pollutants: pollutants,

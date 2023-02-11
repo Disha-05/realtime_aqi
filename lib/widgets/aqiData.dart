@@ -26,7 +26,7 @@ class PollutantsData extends StatelessWidget {
             child: Text('$level',
                 style: const TextStyle(
                   fontSize: 14.0,
-                  color: Colors.white,
+                  color: Color.fromARGB(255, 97, 12, 235),
                 )),
           ),
         ),
