@@ -1,16 +1,14 @@
 # realtime_aqi
 
+##Extracting current location using Geolocator package
+
+![Screenshot_1676088342](https://user-images.githubusercontent.com/77150251/218238480-6dd4e00b-bf90-494c-a84d-344e7e30598c.png)
 A new Flutter project.
 
-## Getting Started
+## Loading Page
 
-This project is a starting point for a Flutter application.
+![Screenshot_1676088347](https://user-images.githubusercontent.com/77150251/218238617-4ce141bd-80ba-4ef1-b514-4dfcd0322ac0.png)
 
-A few resources to get you started if this is your first Flutter project:
+#Realtime AQI 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_1676088316](https://user-images.githubusercontent.com/77150251/218238671-ab24608c-83f9-4dc5-bc28-2abcd796423a.png)
